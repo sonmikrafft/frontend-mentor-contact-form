@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background-repeat: no-repeat;
+  background-color: $lighter_green;
+}
+
+/*
+White Card
+*/
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 37.75rem;
+  background-color: $white;
+
+}
+
+

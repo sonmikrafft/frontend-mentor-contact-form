@@ -1,0 +1,41 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: $font-m;
+  font-family: "Karla", sans-serif;
+  font-weight: $font-weight-s;
+  color: black;
+  line-height: 1.5;
+
+  h1 {
+    font-weight: $font-weight-m;
+    margin: 0;
+  }
+
+
+  p {
+    font-size: $font-s;
+    margin: 0;
+    opacity: 70%;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: black;
+
+    a {
+      color: $medium_green;
+    }
+  }
+}
