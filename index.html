@@ -10,7 +10,8 @@
     <!-- Font Karla -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+          rel="stylesheet">
 
 
     <link rel="stylesheet" href="app/scss/style.css">
@@ -21,34 +22,94 @@
 
 </head>
 <body>
+<main class="container">
+    <form id="form" class="form">
+        <h1 class="title">Contact Us</h1>
 
-Contact Us
+        <!--First Name-->
+        <div class="form__field fname">
+            <label for="fname">
+                First Name
+                <span aria-hidden="true" class="required">*</span>
+            </label>
+            <input type="text" id="fname" name="firstname" aria-describedby="required-firstname">
+            <span aria-live="polite" id="fname-error" class="error__fname error__hide">This field is required</span>
+        </div>
+        <!--Last Name-->
+        <div class="form__field lname">
+            <label for="lname">
+                Last Name
+                <span aria-hidden="true" class="required">*</span>
+            </label>
+            <input type="text" id="lname" name="lastname" aria-describedby="required-lastname">
+            <span aria-live="polite" id="lname-error" class="error__lname error__hide">This field is required</span>
+        </div>
+        <!--First Email-->
+        <div class="form__field email">
+            <label for="fname">
+                Email Address
+                <span aria-hidden="true" class="required">*</span>
+            </label>
+            <input type="text" id="email" name="email" aria-describedby="required-email">
+            <span aria-live="polite" id="email-error" class="error__email error__hide">Please enter a valid email address</span>
+        </div>
+        <!--Query Type-->
+        <div class="form__field query_type">
+            <fieldset aria-describedby="required-query-type">
+                <legend>
+                    Query Type
+                    <span aria-hidden="true" class="required">*</span>
+                </legend>
+                <label for="generalEnquiry" class="option">
+                    <input type="radio" id="generalEnquiry" name="queryType" value="generalEnquiry">
+                    <span class="round_radio_button"></span>
+                    General Enquiry
+                </label>
+                <label for="supportRequest" class="option">
+                    <input type="radio" id="supportRequest" name="queryType" value="supportRequest">
+                    <span class="round_radio_button"></span>
+                    Support Request
+                </label>
+            </fieldset>
+            <span aria-live="polite" id="query-type-error" class="error__query_type error__hide">Please select a query type</span>
+        </div>
+        <!--Message-->
+        <div class="form__field message">
+            <label for="message">
+                Message
+                <span aria-hidden="true" class="required">*</span>
+            </label>
+            <textarea type="text" id="message" name="message" class="message_field" aria-describedby="required-message"></textarea>
+            <span aria-live="polite" id="message-error" class="error__message error__hide">This field is required</span>
+        </div>
+        <!--Terms of Condition -->
+        <div class="form__field consent">
+            <label class="consent_field">
+                <input type="checkbox" id="consent" name="consent" aria-describedby="required-consent">
+                <span class="rectangle_checkbox"></span>
+                <div>
+                    I consent to being contacted by the team
+                    <span aria-hidden="true" class="required">*</span>
+                </div>
+            </label>
+            <span aria-live="polite" id="consent-error" class="error__consent error__hide">To submit this form, please consent to being contacted</span>
+        </div>
+        <!--Submit Button-->
+        <div class="form__field submit">
+            <input type="submit" id="submitBtn" value="Submit">
+        </div>
 
-First Name
-This field is required
+        <!--Snackbar-->
+        <div id="snackbar" class="snackbar">
+            <div class="snackbar_title">
+                <div class="checkmark"></div>
+                <b>Message Sent!</b>
+            </div>
+            Thanks for completing the form. We'll be in touch soon!
+        </div>
+    </form>
+</main>
 
-Last Name
-This field is required
-
-Email Address
-Please enter a valid email address
-This field is required
-
-Query Type
-General Enquiry
-Support Request
-Please select a query type
-
-Message
-This field is required
-
-I consent to being contacted by the team
-To submit this form, please consent to being contacted
-
-Submit
-
-Message Sent!
-Thanks for completing the form. We'll be in touch soon!
 <footer>
     <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

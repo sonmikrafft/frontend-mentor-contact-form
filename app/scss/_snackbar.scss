@@ -1,0 +1,44 @@
+// src: https://www.w3schools.com/howto/howto_js_snackbar.asp
+
+.snackbar {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    top: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 1.5rem;
+    background-color: $darker_grey; /* Black background color */
+    color: $white;
+    border-radius: 1rem;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.snackbar_show {
+    visibility: visible;
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 1.5rem; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 1.5rem; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 1.5rem; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 1.5rem; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}

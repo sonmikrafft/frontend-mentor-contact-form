@@ -34,6 +34,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop](./screenshots/desktop.png)
+![Desktop Success](./screenshots/desktop_success.png)
 ![Mobile](./screenshots/mobile.png)
 
 ### Links
@@ -54,29 +55,31 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Custom Checkboxes and Radio Buttons
+- Snackbar
+- Attribute Selector matches all matching classes
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+[class*="error"]  {
+  color: $red;
 }
 ```
+- change parent when child is checked
+```css
+.option:has(input[type=radio]:checked) {
+  border: 2px solid $medium_green;
+  background-color: rgba($medium_green, 0.1);
+}
+```
+- Timeout
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+setTimeout(() => {
+  snackbar.classList.remove("snackbar_show");
+}, 3000);
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+The viewport sizes still kill me.
 
 ### Useful resources
 
